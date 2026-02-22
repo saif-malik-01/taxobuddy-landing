@@ -1,0 +1,103 @@
+'use client';
+
+import React from 'react';
+import Link from 'next/link';
+
+const Footer: React.FC = () => {
+  return (
+    <footer className="bg-[var(--bg-base)] border-t border-[var(--border-subtle)] pt-16 pb-12">
+      <div className="max-w-7xl mx-auto px-6">
+
+        {/* Main Footer Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+
+          {/* Brand Identity - 4 Columns */}
+          <div className="lg:col-span-4 space-y-6">
+            <Link href="/" className="flex items-center gap-3 group w-fit">
+              <div
+                className="w-8 h-8 rounded-full transition-transform duration-500 group-hover:scale-110 shadow-[0_0_20px_var(--primary)]/20"
+                style={{
+                  background: 'radial-gradient(circle at 30% 30%, var(--primary) 0%, var(--primary-hover) 100%)'
+                }}
+              />
+              <span className="text-[var(--text-primary)] font-black text-xl tracking-tighter uppercase font-heading">
+                Taxo<span className="text-[var(--primary)]">Buddy</span>
+              </span>
+            </Link>
+            <p className="text-[13px] text-[var(--text-secondary)] font-medium leading-relaxed max-w-sm">
+              The intelligent companion for tax and legal professionals. Built with precision, grounded in authority, and delivered at scale.
+            </p>
+            <div className="flex gap-6">
+              {['Twitter', 'LinkedIn'].map(item => (
+                <a key={item} href="#" className="text-[10px] font-black uppercase tracking-[0.2em] text-[var(--text-tertiary)] hover:text-[var(--primary)] transition-colors uppercase">{item}</a>
+              ))}
+            </div>
+          </div>
+
+          {/* Spacer for Desktop */}
+          <div className="hidden lg:block lg:col-span-2" />
+
+          {/* Links Columns - 2 Columns Each */}
+          {[
+            {
+              title: 'Company',
+              links: [
+                { label: 'About Us', href: '/about' },
+                { label: 'Contact Us', href: '/contact' }
+              ]
+            },
+            {
+              title: 'Infrastructure',
+              links: [
+                { label: 'Access Control', href: '/legal/access-control-policy' },
+                { label: 'Data Encryption', href: '/legal/data-encryption-policy' },
+                { label: 'Data Retention', href: '/legal/data-retention-disposal-protection-policy' }
+              ]
+            },
+            {
+              title: 'Legal & Billing',
+              links: [
+                { label: 'Privacy Policy', href: '/legal/privacy-policy' },
+                { label: 'Refund Policy', href: '/legal/refund-policy' },
+                { label: 'Payment Terms', href: '/legal/payment-terms' },
+                { label: 'Disclaimer', href: '/legal/disclaimer' },
+                { label: 'EULA', href: '/legal/eula' }
+              ]
+            }
+          ].map((col) => (
+            <div key={col.title} className="lg:col-span-2">
+              <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-[var(--primary)] mb-6 font-heading">{col.title}</h4>
+              <ul className="space-y-3">
+                {col.links.map(item => (
+                  <li key={item.label}>
+                    <Link href={item.href} className="text-[13px] font-medium text-[var(--text-tertiary)] hover:text-[var(--text-primary)] transition-colors">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom Bar - Ultra Compact */}
+        <div className="pt-8 border-t border-[var(--border-subtle)] flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-10">
+            <span className="text-[10px] font-bold text-[var(--text-disabled)] uppercase tracking-widest">
+              © {new Date().getFullYear()} TaxoBuddy Systems
+            </span>
+            <div className="flex items-center gap-6">
+              <span className="text-[9px] font-bold text-[var(--text-disabled)] uppercase tracking-[0.2em] italic">Startup India Member</span>
+              <span className="w-1 h-1 rounded-full bg-[var(--border-subtle)] hidden md:block" />
+              <span className="text-[9px] font-bold text-[var(--text-disabled)] uppercase tracking-[0.2em] italic">SOC2 Type II</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

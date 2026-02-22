@@ -1,0 +1,113 @@
+@import 'tailwindcss';
+
+/* ─── TaxoBuddy Theme System ─── */
+:root {
+  /* Default: Dark Theme */
+  --primary: #fb923c;
+  --primary-hover: #f97316;
+  --bg-base: #0a0a0a;
+  --bg-surface: rgba(255, 255, 255, 0.05);
+  --bg-raised: rgba(255, 255, 255, 0.08);
+  --bg-overlay: rgba(255, 255, 255, 0.12);
+  --border-subtle: rgba(255, 255, 255, 0.04);
+  --border-default: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.12);
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --text-tertiary: #71717a;
+  --text-disabled: #3f3f46;
+  --dashboard-bg: rgba(0, 0, 0, 0.4);
+  --theme-invert: 0;
+}
+
+[data-theme='light'] {
+  --bg-base: #ffffff;
+  --bg-surface: rgba(0, 0, 0, 0.03);
+  --bg-raised: rgba(0, 0, 0, 0.06);
+  --bg-overlay: rgba(0, 0, 0, 0.08);
+  --border-subtle: rgba(0, 0, 0, 0.04);
+  --border-default: rgba(0, 0, 0, 0.08);
+  --border-strong: rgba(0, 0, 0, 0.12);
+  --text-primary: #0a0a0a;
+  --text-secondary: #52525b;
+  /* zinc-600 */
+  --text-tertiary: #71717a;
+  --text-disabled: #a1a1aa;
+  --dashboard-bg: #f8fafc;
+  --theme-invert: 1;
+}
+
+/* ─── Base Reset ─── */
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-geist-sans, ui-sans-serif, system-ui, sans-serif);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ─── Glass Surface Utility ─── */
+.glass {
+  background: var(--bg-surface);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-default);
+}
+
+.section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.font-heading {
+  font-family: var(--font-geist-sans, ui-sans-serif, system-ui, sans-serif);
+  letter-spacing: -0.02em;
+}
+
+/* ─── Custom scrollbar ─── */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 99px;
+}
+
+/* ─── Animations ─── */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes auth-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-auth-fade {
+  animation: auth-fade-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
