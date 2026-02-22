@@ -36,7 +36,7 @@ const TestimonialsSection: React.FC = () => {
 
         {/* Pricing Cards Grid - Global Glass Design */}
         <div className="grid md:grid-cols-3 gap-8 mb-24 animate-fade-up" style={{ animationDelay: '100ms' }}>
-          {plans.map((plan, i) => (
+          {plans.map((plan) => (
             <div
               key={plan.name}
               className={`glass rounded-[2rem] p-10 flex flex-col items-center text-center transition-all duration-500 hover:bg-[var(--bg-surface)] group ${plan.popular ? 'border-[var(--primary)]/30 ring-1 ring-[var(--primary)]/10' : ''}`}

@@ -87,7 +87,7 @@ const FeaturesSection: React.FC = () => {
             Intelligence meets <br className="hidden md:block" /> legal precision.
           </h2>
           <p className="max-w-xl mx-auto text-sm text-[var(--text-secondary)] font-medium leading-relaxed">
-            We've automated the core research and drafting workflows, mapping 60 years of legal authority into a high-performance neural system.
+            We&apos;ve automated the core research and drafting workflows, mapping 60 years of legal authority into a high-performance neural system.
           </p>
         </div>
 
@@ -108,7 +108,7 @@ const FeaturesSection: React.FC = () => {
                 <h3 className="text-[11px] font-black uppercase tracking-[0.2em] text-[var(--text-primary)]">Research Intelligence</h3>
               </div>
               <p className="text-sm text-[var(--text-secondary)] font-medium leading-relaxed">
-                Query decades of tax legislation with sub-second latency. Verified by the country's most authoritative primary source index.
+                Query decades of tax legislation with sub-second latency. Verified by the country&apos;s most authoritative primary source index.
               </p>
               <div className="flex flex-wrap gap-2">
                 {['1M+ Docs', '99.8% ACC', 'Citations'].map(tag => (

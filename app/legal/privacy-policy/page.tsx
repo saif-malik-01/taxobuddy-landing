@@ -33,7 +33,7 @@ const PrivacyPolicyPage = () => {
                                 01. Introduction
                             </h2>
                             <p className="text-[15px] text-[var(--text-secondary)] font-medium leading-relaxed mb-6">
-                                TaxoBuddy ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our professional tax intelligence services.
+                                TaxoBuddy (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our professional tax intelligence services.
                             </p>
                             <p className="text-[15px] text-[var(--text-secondary)] font-medium leading-relaxed">
                                 As a platform built for legal and tax professionals, we understand the critical nature of data privacy. Our systems are designed with isolation and security at their core.

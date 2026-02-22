@@ -41,7 +41,7 @@ export default function PricingSection() {
             Professional <br /><span className="text-[var(--primary)]">Intelligence.</span>
           </h1>
           <p className="max-w-2xl mx-auto text-xl text-[var(--text-secondary)] font-medium leading-relaxed mb-12">
-            Choose the plan that matches your firm's research intensity. From solo practitioners to national firms, we provide grounded, source-verified authority.
+            Choose the plan that matches your firm&apos;s research intensity. From solo practitioners to national firms, we provide grounded, source-verified authority.
           </p>
 
           <PricingToggle isMonthly={isMonthly} onToggle={togglePricing} />

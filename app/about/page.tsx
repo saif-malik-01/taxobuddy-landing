@@ -136,7 +136,7 @@ const AboutPage = () => {
                 </h3>
                 <div className="space-y-6 text-[var(--text-secondary)] font-medium leading-relaxed">
                   <p>
-                    Our engine doesn't just "index" keywords. It maps the semantic relationship between a 1970 tribunal ruling and a 2024 amendment. It understands legal hierarchy and context.
+                    Our engine doesn&apos;t just &quot;index&quot; keywords. It maps the semantic relationship between a 1970 tribunal ruling and a 2024 amendment. It understands legal hierarchy and context.
                   </p>
                   <p>
                     By visualizing 60 years of authority as a connected graph, we provide professionals with a single, source-verified point of truth in under 2 seconds.
