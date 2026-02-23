@@ -63,12 +63,18 @@ const BillingInfrastructureSection: React.FC = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <button className="px-8 py-3.5 rounded-xl bg-[var(--text-primary)] text-[var(--bg-base)] text-[11px] font-black uppercase tracking-[0.2em] transition-all duration-300 hover:scale-[1.05] active:scale-[0.95] shadow-2xl shadow-black/10">
+                <a
+                  href="https://chat.taxobuddy.ai/auth/signup"
+                  className="px-8 py-3.5 rounded-xl bg-[var(--text-primary)] text-[var(--bg-base)] text-[11px] font-black uppercase tracking-[0.2em] transition-all duration-300 hover:scale-[1.05] active:scale-[0.95] shadow-2xl shadow-black/10 text-center"
+                >
                   Get Started
-                </button>
-                <button className="px-8 py-3.5 rounded-xl border border-[var(--border-strong)] text-[var(--text-primary)] text-[11px] font-black uppercase tracking-[0.2em] transition-all duration-300 hover:bg-[var(--bg-surface)] hover:border-[var(--text-primary)]">
+                </a>
+                <a
+                  href="/contact"
+                  className="px-8 py-3.5 rounded-xl border border-[var(--border-strong)] text-[var(--text-primary)] text-[11px] font-black uppercase tracking-[0.2em] transition-all duration-300 hover:bg-[var(--bg-surface)] hover:border-[var(--text-primary)] text-center"
+                >
                   Book a Demo
-                </button>
+                </a>
               </div>
             </div>
 

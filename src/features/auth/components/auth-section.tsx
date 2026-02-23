@@ -54,7 +54,7 @@ const AuthSection: React.FC<AuthSectionProps> = ({ type = 'login' }) => {
         <p className="text-[11px] font-bold text-[var(--text-tertiary)] uppercase tracking-widest">
           {isLogin ? "Don't have an account?" : "Already have an account?"}
           <Link
-            href={isLogin ? '/register' : '/login'}
+            href={isLogin ? 'https://chat.taxobuddy.ai/auth/signup' : 'https://chat.taxobuddy.ai/auth/login'}
             className="ml-3 text-[var(--primary)] hover:opacity-80 transition-opacity"
           >
             {isLogin ? 'Sign Up' : 'Log In'}

@@ -11,6 +11,7 @@ interface PricingPlan {
   features: string[];
   ctaText: string;
   popular: boolean;
+  comingSoon?: boolean;
 }
 
 interface PricingCardProps {
@@ -43,15 +44,25 @@ export default function PricingCard({ plan, isMonthly, delay = 0 }: PricingCardP
           </p>
         </div>
 
-        <div className="mb-12">
-          <div className="flex items-baseline gap-2">
-            <span className="text-5xl font-black text-[var(--text-primary)] tracking-tighter">
-              ${price}
-            </span>
-            <span className="text-[10px] font-black uppercase tracking-widest text-[var(--text-tertiary)]">
-              {period}
-            </span>
-          </div>
+        <div className="mb-12 min-h-[80px] flex flex-col justify-center">
+          {plan.comingSoon ? (
+            <div className="flex">
+              <span className="px-4 py-1.5 rounded-full border border-[var(--border-strong)] bg-[var(--bg-overlay)] text-[10px] font-black text-[var(--text-tertiary)] uppercase tracking-[0.2em]">
+                Coming Soon
+              </span>
+            </div>
+          ) : (
+            <div className="flex items-baseline gap-2">
+              <span className="text-5xl font-black text-[var(--text-primary)] tracking-tighter">
+                {price === 0 ? 'Free' : `$${price}`}
+              </span>
+              {price !== 0 && (
+                <span className="text-[10px] font-black uppercase tracking-widest text-[var(--text-tertiary)]">
+                  {period}
+                </span>
+              )}
+            </div>
+          )}
         </div>
 
         <div className="flex-1 mb-12">
@@ -67,11 +78,14 @@ export default function PricingCard({ plan, isMonthly, delay = 0 }: PricingCardP
         </div>
 
         <Link
-          href="/register"
-          className={`w-full py-5 rounded-2xl font-black text-[11px] uppercase tracking-[0.3em] text-center transition-all duration-300 ${plan.popular
+          href={plan.comingSoon ? '#' : "https://chat.taxobuddy.ai/auth/signup"}
+          className={`w-full py-5 rounded-2xl font-black text-[11px] uppercase tracking-[0.3em] text-center transition-all duration-300 ${plan.comingSoon
+            ? 'bg-[var(--bg-surface)] text-[var(--text-disabled)] cursor-not-allowed border border-[var(--border-subtle)]'
+            : plan.popular
               ? 'bg-[var(--text-primary)] text-[var(--bg-base)] hover:bg-[var(--primary)]'
               : 'border border-[var(--border-strong)] text-[var(--text-primary)] hover:bg-[var(--bg-surface)]'
             }`}
+          onClick={(e) => plan.comingSoon && e.preventDefault()}
         >
           {plan.ctaText}
         </Link>

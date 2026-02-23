@@ -5,6 +5,13 @@ import React, { useState } from 'react';
 const HeroSection: React.FC = () => {
   const [query, setQuery] = useState('');
 
+  const handleSubmit = (e?: React.FormEvent) => {
+    e?.preventDefault();
+    if (query.trim()) {
+      window.location.href = `https://chat.taxobuddy.ai/chat?q=${encodeURIComponent(query)}`;
+    }
+  };
+
   return (
     <section className="relative min-h-[90vh] flex flex-col items-center justify-center pt-12 pb-16 overflow-hidden bg-transparent">
 
@@ -51,7 +58,10 @@ const HeroSection: React.FC = () => {
           className="w-full max-w-2xl mb-8 animate-fade-up"
           style={{ animationDelay: '300ms' }}
         >
-          <div className="relative glass rounded-2xl p-1.5 shadow-2xl">
+          <form
+            onSubmit={handleSubmit}
+            className="relative glass rounded-2xl p-1.5 shadow-2xl"
+          >
             <input
               type="text"
               value={query}
@@ -60,27 +70,38 @@ const HeroSection: React.FC = () => {
               className="w-full px-6 py-4 bg-transparent text-[var(--text-primary)] placeholder-[var(--text-tertiary)] outline-none text-sm"
             />
             <button
+              type="submit"
               className="absolute right-2 top-1/2 -translate-y-1/2 px-6 py-3 rounded-xl bg-[var(--text-primary)] text-[var(--bg-base)] text-[11px] font-black uppercase tracking-widest transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:bg-[var(--primary)]"
             >
               Ask
             </button>
-          </div>
+          </form>
           <div className="mt-6 flex gap-6 justify-center">
             {['§10(13A)', 'GST Penalty', 'TDS Rates'].map(tag => (
-              <button key={tag} className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)] hover:text-[var(--primary)] transition-colors uppercase">{tag}</button>
+              <button
+                key={tag}
+                onClick={() => {
+                  setQuery(tag);
+                  window.location.href = `https://chat.taxobuddy.ai/chat?q=${encodeURIComponent(tag)}`;
+                }}
+                className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)] hover:text-[var(--primary)] transition-colors uppercase"
+              >
+                {tag}
+              </button>
             ))}
           </div>
         </div>
 
         {/* ── CTA Buttons ── */}
         <div className="flex flex-wrap items-center justify-center gap-6 animate-fade-up" style={{ animationDelay: '400ms' }}>
-          <button
+          <a
+            href="https://chat.taxobuddy.ai/auth/signup"
             className="px-10 py-3.5 rounded-full text-[11px] font-black uppercase tracking-[0.2em] flex items-center gap-2 transition-all duration-300 hover:bg-[var(--primary)] hover:text-black hover:border-[var(--primary)]"
             style={{ border: '1px solid var(--border-strong)', color: 'var(--text-primary)' }}
           >
             Get Started
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-          </button>
+          </a>
         </div>
 
       </div>

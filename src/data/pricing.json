@@ -8,78 +8,72 @@
   },
   "plans": [
     {
-      "id": "basic",
-      "name": "Basic",
-      "description": "During this phase the design is developed to meet the required technical standards to",
-      "monthlyPrice": 10,
-      "annualPrice": 20,
+      "id": "free",
+      "name": "Free Plan",
+      "description": "Essential intelligence for students and solo practitioners to get started with legal research.",
+      "monthlyPrice": 0,
+      "annualPrice": 0,
       "features": [
-        "Core engagement survey",
-        "Topic-based assessments",
-        "Custom topic-based assessments",
-        "Filterable heatmap & analytics"
+        "Core legal research",
+        "Source-verified citations",
+        "Limited daily queries",
+        "Public document access"
       ],
-      "ctaText": "Start now",
-      "ctaLink": "#",
+      "ctaText": "Get Started",
+      "ctaLink": "https://chat.taxobuddy.ai/auth/signup",
       "popular": false
     },
     {
-      "id": "business",
-      "name": "Business plan",
-      "description": "During this phase the design is developed to meet the required technical standards to",
-      "monthlyPrice": 25,
-      "annualPrice": 50,
+      "id": "pro",
+      "name": "Pro Plan",
+      "description": "Advanced tools for tax professionals needing deep insights and drafting capabilities.",
+      "monthlyPrice": 0,
+      "annualPrice": 0,
+      "comingSoon": true,
       "features": [
-        "Core engagement survey",
-        "Topic-based assessments",
-        "Custom topic-based assessments",
-        "Filterable heatmap & analytics"
+        "Everything in Free",
+        "Smart drafting assistant",
+        "Unlimited queries",
+        "Priority AI access"
       ],
-      "ctaText": "Start now",
+      "ctaText": "Coming Soon",
       "ctaLink": "#",
       "popular": true
     },
     {
-      "id": "premium",
-      "name": "Premium",
-      "description": "During this phase the design is developed to meet the required technical standards to",
-      "monthlyPrice": 50,
-      "annualPrice": 100,
+      "id": "enterprise",
+      "name": "Enterprise",
+      "description": "Custom solutions for large law firms and accounting practices with team collaboration.",
+      "monthlyPrice": 0,
+      "annualPrice": 0,
+      "comingSoon": true,
       "features": [
-        "Core engagement survey",
-        "Topic-based assessments",
-        "Custom topic-based assessments",
-        "Filterable heatmap & analytics"
+        "Everything in Pro",
+        "Dedicated account manager",
+        "API access & integration",
+        "Team management tools"
       ],
-      "ctaText": "Start now",
-      "ctaLink": "#",
+      "ctaText": "Contact Sales",
+      "ctaLink": "/contact",
       "popular": false
     }
   ],
   "faqs": [
     {
-      "question": "What are the limits for money transfers from the United States?",
-      "answer": "For most currencies, there are no limits to the transfer amount. Certain currencies might have limits set by our payments partners. You will always see the limit in the Revolut app before making the transfer."
+      "question": "What is TaxoBuddy?",
+      "answer": "TaxoBuddy is an AI-powered legal and tax research engine built on decades of authority, designed to provide professionals with precise, source-verified answers."
     },
     {
-      "question": "Is it safe to send money with Revolut?",
-      "answer": "Yes. Banking services are provided by Metropolitan Commercial Bank, Member FDIC."
+      "question": "Is the intelligence source-verified?",
+      "answer": "Yes, every response is grounded in real legal extracts and case law, providing you with the exact sources to verify and cite."
     },
     {
-      "question": "How can I make an international transfer from the United States?",
-      "answer": "Enter your recipient's details. You'll usually need the recipient's full name and their bank account number and bank code. Some payment methods and destination countries may require additional information."
+      "question": "How do I upgrade my plan?",
+      "answer": "Currently, we are offering a Free tier. Paid plans are coming soon and will be announcement on our blog and via email."
     },
     {
-      "question": "How long does it take to send money abroad from the United States?",
-      "answer": "Different payment methods affect your transfer delivery time. Payments to other Revolut users and card payments are instant."
-    },
-    {
-      "question": "Where can I transfer money to from the United States?",
-      "answer": "Transfers to the following countries are not supported: Afghanistan, Angola, Burkina Faso, Burundi, Cambodia, Central African Republic, Congo (Brazzaville), Congo (Kinshasa), Cuba, Eritrea, Ethiopia, Guinea, Guinea-Bissau, Guyana, Haiti, Iran..."
-    },
-    {
-      "question": "How do I track my transfer?",
-      "answer": "Enter your recipient's details. You'll usually need the recipient's full name and their bank account number and bank code."
+      "question": "Can I use TaxoBuddy for free?",
+      "answer": "Yes, our Basic tier is free for everyone to start researching and experiencing the power of tax intelligence."
     }
   ]
 }

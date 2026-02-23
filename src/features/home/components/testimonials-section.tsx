@@ -3,16 +3,16 @@
 import React from 'react';
 
 const plans = [
-  { name: 'Income Tax', price: '₹49,500', queries: 'Unlimited', citations: '350', popular: false },
-  { name: 'GST Intelligence', price: '₹49,500', queries: 'Unlimited', citations: '350', popular: true },
-  { name: 'Professional Combo', price: '₹84,500', queries: 'Unlimited', citations: '700', popular: false },
+  { name: 'Free Plan', price: 'Free', queries: 'Limited', citations: 'Enabled', popular: false, comingSoon: false },
+  { name: 'Pro Plan', price: 'Coming Soon', queries: 'Unlimited', citations: 'Advanced', popular: true, comingSoon: true },
+  { name: 'Enterprise', price: 'Coming Soon', queries: 'Custom', citations: 'Full Suite', popular: false, comingSoon: true },
 ];
 
 const faqs = [
   { q: 'What is Taxobuddy?', a: 'An AI-driven research platform built on 60+ years of authoritative Indian legal content.' },
   { q: 'Does it hallucinate?', a: 'No. Every response is grounded in primary legal sources with direct citation links.' },
   { q: 'Data Privacy?', a: 'Every query is encrypted and client-side isolated. We don\'t share professional data.' },
-  { q: 'Integration?', a: 'Supports MS Word for direct drafting and case law research without switching tabs.' },
+  { q: 'Is there a free trial?', a: 'We offer a robust Free Plan to get you started with core research capabilities.' },
 ];
 
 const TestimonialsSection: React.FC = () => {
@@ -42,9 +42,21 @@ const TestimonialsSection: React.FC = () => {
               className={`glass rounded-[2rem] p-10 flex flex-col items-center text-center transition-all duration-500 hover:bg-[var(--bg-surface)] group ${plan.popular ? 'border-[var(--primary)]/30 ring-1 ring-[var(--primary)]/10' : ''}`}
             >
               <h3 className="text-[10px] font-black uppercase tracking-[0.25em] text-[var(--text-tertiary)] mb-10">{plan.name}</h3>
-              <div className="flex items-baseline gap-1 mb-10 transition-transform group-hover:scale-105 duration-500">
-                <span className="text-4xl md:text-5xl font-black text-[var(--text-primary)] tracking-tighter">{plan.price}</span>
-                <span className="text-[10px] text-[var(--text-disabled)] font-black uppercase tracking-widest ml-1">/ Year</span>
+              <div className="flex flex-col items-center justify-center min-h-[80px] mb-10 transition-transform group-hover:scale-105 duration-500">
+                {plan.comingSoon ? (
+                  <span className="px-4 py-1 rounded-full border border-[var(--border-strong)] bg-[var(--bg-overlay)] text-[10px] font-black text-[var(--text-tertiary)] uppercase tracking-[0.2em]">
+                    Coming Soon
+                  </span>
+                ) : (
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-4xl md:text-5xl font-black text-[var(--text-primary)] tracking-tighter">
+                      {plan.price}
+                    </span>
+                    {plan.price !== 'Free' && (
+                      <span className="text-[10px] text-[var(--text-disabled)] font-black uppercase tracking-widest ml-1">/ Year</span>
+                    )}
+                  </div>
+                )}
               </div>
 
               <div className="space-y-4 mb-12 w-full">
@@ -60,11 +72,21 @@ const TestimonialsSection: React.FC = () => {
                 ))}
               </div>
 
-              <button
-                className={`w-full py-4 rounded-xl text-[11px] font-black uppercase tracking-[0.2em] transition-all duration-300 ${plan.popular ? 'bg-[var(--primary)] text-black shadow-2xl shadow-[var(--primary)]/10 hover:scale-[1.02]' : 'bg-[var(--bg-surface)] text-[var(--text-primary)] border border-[var(--border-subtle)] hover:bg-[var(--bg-overlay)] hover:border-[var(--border-default)]'}`}
-              >
-                Register Now
-              </button>
+              {plan.comingSoon ? (
+                <button
+                  disabled
+                  className="w-full py-4 rounded-xl text-[11px] font-black uppercase tracking-[0.2em] bg-[var(--bg-surface)] text-[var(--text-disabled)] border border-[var(--border-subtle)] cursor-not-allowed"
+                >
+                  Coming Soon
+                </button>
+              ) : (
+                <a
+                  href="https://chat.taxobuddy.ai/auth/signup"
+                  className={`w-full py-4 rounded-xl text-center text-[11px] font-black uppercase tracking-[0.2em] transition-all duration-300 ${plan.popular ? 'bg-[var(--primary)] text-black shadow-2xl shadow-[var(--primary)]/10 hover:scale-[1.02]' : 'bg-[var(--text-primary)] text-[var(--bg-base)] hover:scale-[1.02]'}`}
+                >
+                  Get Started
+                </a>
+              )}
             </div>
           ))}
         </div>

@@ -15,6 +15,7 @@ interface PricingPlan {
   ctaText: string;
   ctaLink: string;
   popular: boolean;
+  comingSoon?: boolean;
 }
 
 export default function PricingSection() {
