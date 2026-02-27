@@ -69,19 +69,9 @@ const BillingInfrastructureSection: React.FC = () => {
                 >
                   Get Started
                 </a>
-                <a
-                  href="/contact"
-                  className="px-8 py-3.5 rounded-xl border border-[var(--border-strong)] text-[var(--text-primary)] text-[11px] font-black uppercase tracking-[0.2em] transition-all duration-300 hover:bg-[var(--bg-surface)] hover:border-[var(--text-primary)] text-center"
-                >
-                  Book a Demo
-                </a>
               </div>
             </div>
 
-            {/* Decorative Corner Label */}
-            <div className="absolute bottom-6 right-8 text-[9px] font-bold text-[var(--text-disabled)] uppercase tracking-widest italic opacity-40">
-              SOC2 • Startup India • 2024
-            </div>
           </div>
         </div>
 

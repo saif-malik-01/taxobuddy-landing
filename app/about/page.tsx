@@ -86,7 +86,7 @@ const AboutPage = () => {
                   Partner With Us
                 </Link>
                 <div className="flex items-center gap-4 px-6 border border-[var(--border-subtle)] rounded-xl">
-                  <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                  <div className="w-2 h-2 rounded-full bg-[var(--primary)] animate-pulse" />
                   <span className="text-[10px] font-black uppercase tracking-widest text-[var(--text-secondary)]">Trusted by 500+ Firms</span>
                 </div>
               </div>
@@ -186,13 +186,6 @@ const AboutPage = () => {
               <Link href="/contact" className="w-full sm:w-auto px-12 py-5 border border-[var(--border-strong)] text-[var(--text-primary)] text-[11px] font-black uppercase tracking-widest rounded-xl hover:bg-[var(--bg-surface)] transition-all">
                 Contact Sales
               </Link>
-            </div>
-            <div className="mt-16 text-[9px] font-bold text-[var(--text-disabled)] uppercase tracking-[0.3em] flex items-center justify-center gap-8">
-              <span>SOC2 TYPE II</span>
-              <span className="w-1 h-1 rounded-full bg-[var(--border-subtle)]" />
-              <span>STARTUP INDIA</span>
-              <span className="w-1 h-1 rounded-full bg-[var(--border-subtle)]" />
-              <span>GDPR READY</span>
             </div>
           </div>
         </section>

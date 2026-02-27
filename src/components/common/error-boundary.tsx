@@ -26,19 +26,19 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   render(): ReactNode {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-900">
-          <div className="text-center p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">
-              Oops! Something went wrong.
+        <div className="min-h-screen flex items-center justify-center bg-[var(--bg-base)]">
+          <div className="text-center p-8 max-w-md animate-fade-up">
+            <h2 className="text-2xl font-black text-[var(--text-primary)] mb-6 tracking-tight uppercase">
+              System Interface <span className="text-[var(--primary)]">Interrupted.</span>
             </h2>
-            <p className="text-gray-300 mb-6">
-              We&apos;re sorry for the inconvenience. Please try refreshing the page.
+            <p className="text-[var(--text-secondary)] font-medium leading-relaxed mb-8">
+              An unexpected error has been detected. Re-initializing the environment may resolve the state.
             </p>
             <button
               onClick={() => window.location.reload()}
-              className="px-6 py-3 bg-green-400 text-black rounded-full hover:bg-green-500 transition-colors"
+              className="px-8 py-4 bg-[var(--text-primary)] text-[var(--bg-base)] font-black uppercase text-[11px] tracking-widest rounded-xl hover:bg-[var(--primary)] transition-all"
             >
-              Refresh Page
+              Reload Environment
             </button>
           </div>
         </div>

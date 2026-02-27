@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
               The intelligent companion for tax and legal professionals. Built with precision, grounded in authority, and delivered at scale.
             </p>
             <div className="flex gap-6">
-              {['Twitter', 'LinkedIn'].map(item => (
+              {['Twitter', 'LinkedIn', 'Instagram', 'Facebook'].map(item => (
                 <a key={item} href="#" className="text-[10px] font-black uppercase tracking-[0.2em] text-[var(--text-tertiary)] hover:text-[var(--primary)] transition-colors uppercase">{item}</a>
               ))}
             </div>
@@ -81,18 +81,10 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar - Ultra Compact */}
-        <div className="pt-8 border-t border-[var(--border-subtle)] flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-10">
-            <span className="text-[10px] font-bold text-[var(--text-disabled)] uppercase tracking-widest">
-              © {new Date().getFullYear()} TaxoBuddy Systems
-            </span>
-            <div className="flex items-center gap-6">
-              <span className="text-[9px] font-bold text-[var(--text-disabled)] uppercase tracking-[0.2em] italic">Startup India Member</span>
-              <span className="w-1 h-1 rounded-full bg-[var(--border-subtle)] hidden md:block" />
-              <span className="text-[9px] font-bold text-[var(--text-disabled)] uppercase tracking-[0.2em] italic">SOC2 Type II</span>
-            </div>
-          </div>
-
+        <div className="pt-8 border-t border-[var(--border-subtle)] flex justify-center">
+          <span className="text-[10px] font-bold text-[var(--text-disabled)] uppercase tracking-widest">
+            © {new Date().getFullYear()} TaxoBuddy. All Rights Reserved.
+          </span>
         </div>
 
       </div>

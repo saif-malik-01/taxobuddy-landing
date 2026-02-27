@@ -134,7 +134,7 @@ const FeaturesSection: React.FC = () => {
                 <h3 className="text-[11px] font-black uppercase tracking-[0.2em] text-[var(--text-primary)]">Response Strategist</h3>
               </div>
               <p className="text-sm text-[var(--text-secondary)] font-medium leading-relaxed">
-                Transform complex notices into precise legal drafts. Automatically bifurcate issues and cite relevant tribunal rulings.
+                Transform complex notices into precise legal drafts. Automatically bifurcate issues and cite relevant rulings.
               </p>
               <div className="flex flex-wrap gap-2">
                 {['Auto-Draft', 'Issue Mapping', 'SOC2'].map(tag => (

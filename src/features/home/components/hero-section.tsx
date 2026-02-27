@@ -41,8 +41,8 @@ const HeroSection: React.FC = () => {
           className="font-heading font-black leading-[1.05] tracking-tight mb-6 text-[var(--text-primary)] animate-fade-up uppercase"
           style={{ fontSize: 'clamp(2.5rem, 8vw, 5rem)', animationDelay: '100ms' }}
         >
-          Complex law into <br className="hidden md:block" />
-          <span style={{ color: 'var(--primary)' }}>financial clarity.</span>
+          complex law (gst) into <br className="hidden md:block" />
+          <span style={{ color: 'var(--primary)' }}>clarity with precision</span>
         </h1>
 
         {/* ── Sub-headline ── */}
@@ -67,7 +67,7 @@ const HeroSection: React.FC = () => {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Ask a tax or legal question..."
-              className="w-full px-6 py-4 bg-transparent text-[var(--text-primary)] placeholder-[var(--text-tertiary)] outline-none text-sm"
+              className="w-full px-6 pr-24 py-4 bg-transparent text-[var(--text-primary)] placeholder-[var(--text-tertiary)] outline-none text-sm"
             />
             <button
               type="submit"
@@ -77,7 +77,7 @@ const HeroSection: React.FC = () => {
             </button>
           </form>
           <div className="mt-6 flex gap-6 justify-center">
-            {['§10(13A)', 'GST Penalty', 'TDS Rates'].map(tag => (
+            {['Research', 'Draft Response', 'Summarization'].map(tag => (
               <button
                 key={tag}
                 onClick={() => {
@@ -104,21 +104,6 @@ const HeroSection: React.FC = () => {
           </a>
         </div>
 
-      </div>
-
-      {/* ── Partner Strip ── */}
-      <div className="mt-auto pt-20 w-full">
-        <p className="text-center text-[10px] uppercase tracking-[0.4em] font-black text-[var(--text-disabled)] mb-6">
-          Partnering with leading firms
-        </p>
-        <div className="flex flex-wrap justify-center items-center gap-16 md:gap-24 opacity-30 grayscale invert-[var(--theme-invert)]">
-          {[1, 2, 3, 4, 5].map((i) => (
-            <div key={i} className="flex items-center gap-2">
-              <div className="w-5 h-5 rounded-md bg-[var(--text-disabled)]" />
-              <div className="h-1.5 w-12 bg-[var(--border-strong)] rounded-full" />
-            </div>
-          ))}
-        </div>
       </div>
 
     </section>

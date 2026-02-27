@@ -10,16 +10,16 @@ const Loading: React.FC<LoadingProps> = ({
   fullScreen = false
 }) => {
   const containerClass = fullScreen
-    ? 'fixed inset-0 flex items-center justify-center bg-gray-900 z-50'
+    ? 'fixed inset-0 flex items-center justify-center bg-[var(--bg-base)] z-50'
     : 'flex items-center justify-center p-8';
 
   return (
     <div className={containerClass}>
       <div className="text-center">
         <div className="inline-flex items-center justify-center w-16 h-16 mb-4">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-400"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[var(--primary)]"></div>
         </div>
-        <p className="text-white">{message}</p>
+        <p className="text-[var(--text-secondary)] font-medium uppercase tracking-[0.2em] text-[10px]">{message}</p>
       </div>
     </div>
   );

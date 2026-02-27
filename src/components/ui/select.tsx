@@ -30,32 +30,37 @@ const Select: React.FC<SelectProps> = ({
   className = '',
   ...props
 }) => {
-  const baseClasses = 'w-full px-4 py-3 text-white bg-transparent border border-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed';
+  const baseClasses = 'w-full px-4 py-3 text-[var(--text-primary)] bg-[var(--bg-surface)] border border-[var(--border-subtle)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/30 focus:border-[var(--primary)]/50 disabled:opacity-50 disabled:cursor-not-allowed appearance-none';
 
   const classes = `${baseClasses} ${className}`;
 
   return (
-    <select
-      value={value}
-      onChange={onChange}
-      name={name}
-      required={required}
-      disabled={disabled}
-      className={classes}
-      {...props}
-    >
-      <option value="" disabled>{placeholder}</option>
-      {options.map((option, index) => {
-        const optionValue = typeof option === 'string' ? option : option.value;
-        const optionLabel = typeof option === 'string' ? option : option.label;
+    <div className="relative">
+      <select
+        value={value}
+        onChange={onChange}
+        name={name}
+        required={required}
+        disabled={disabled}
+        className={classes}
+        {...props}
+      >
+        <option value="" disabled className="bg-[var(--bg-base)] text-[var(--text-tertiary)]">{placeholder}</option>
+        {options.map((option, index) => {
+          const optionValue = typeof option === 'string' ? option : option.value;
+          const optionLabel = typeof option === 'string' ? option : option.label;
 
-        return (
-          <option key={index} value={optionValue} className="bg-gray-900 text-white">
-            {optionLabel}
-          </option>
-        );
-      })}
-    </select>
+          return (
+            <option key={index} value={optionValue} className="bg-[var(--bg-base)] text-[var(--text-primary)]">
+              {optionLabel}
+            </option>
+          );
+        })}
+      </select>
+      <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-[var(--text-tertiary)]">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+      </div>
+    </div>
   );
 };
 

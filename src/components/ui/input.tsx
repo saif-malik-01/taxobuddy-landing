@@ -25,7 +25,7 @@ const Input: React.FC<InputProps> = ({
   className = '',
   ...props
 }) => {
-  const baseClasses = 'w-full px-4 py-3 text-white bg-transparent border border-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent placeholder-gray-400 disabled:opacity-50 disabled:cursor-not-allowed';
+  const baseClasses = 'w-full px-4 py-3 text-[var(--text-primary)] bg-[var(--bg-surface)] border border-[var(--border-subtle)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/30 focus:border-[var(--primary)]/50 placeholder-[var(--text-disabled)] disabled:opacity-50 disabled:cursor-not-allowed';
 
   const classes = `${baseClasses} ${className}`;
 
