@@ -88,7 +88,7 @@ const Header: React.FC = () => {
           <Link href="https://chat.taxobuddy.ai/auth/login" className="hidden md:block text-[10px] font-black uppercase tracking-[0.25em] text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Log In</Link>
           <Link
             href="https://chat.taxobuddy.ai/auth/signup"
-            className="px-5 py-2.5 rounded-xl bg-[var(--text-primary)] text-[var(--bg-base)] text-[10px] font-black uppercase tracking-[0.15em] transition-all duration-300 hover:scale-[1.05] active:scale-[0.95]"
+            className="hidden md:inline-block px-5 py-2.5 rounded-xl bg-[var(--text-primary)] text-[var(--bg-base)] text-[10px] font-black uppercase tracking-[0.15em] transition-all duration-300 hover:scale-[1.05] active:scale-[0.95]"
           >
             Sign Up
           </Link>
@@ -137,7 +137,7 @@ const Header: React.FC = () => {
               onClick={() => setMobileMenuOpen(false)}
               className="block w-full py-4 rounded-xl bg-[var(--primary)] text-black text-[11px] font-black uppercase tracking-widest"
             >
-              Get Started
+              Sign Up
             </Link>
           </div>
         </div>
