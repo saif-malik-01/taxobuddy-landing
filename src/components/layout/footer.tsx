@@ -67,15 +67,17 @@ const Footer: React.FC = () => {
           ].map((col) => (
             <div key={col.title} className="lg:col-span-2">
               <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-[var(--primary)] mb-6 font-heading">{col.title}</h4>
-              <ul className="space-y-3">
-                {col.links.map(item => (
-                  <li key={item.label}>
-                    <Link href={item.href} className="text-[13px] font-medium text-[var(--text-tertiary)] hover:text-[var(--text-primary)] transition-colors">
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <nav aria-label={`${col.title} navigation`}>
+                <ul className="space-y-3">
+                  {col.links.map(item => (
+                    <li key={item.label}>
+                      <Link href={item.href} className="text-[13px] font-medium text-[var(--text-tertiary)] hover:text-[var(--text-primary)] transition-colors">
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
             </div>
           ))}
         </div>
