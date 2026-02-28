@@ -28,8 +28,13 @@ const Footer: React.FC = () => {
               The intelligent companion for tax and legal professionals. Built with precision, grounded in authority, and delivered at scale.
             </p>
             <div className="flex gap-6">
-              {['Twitter', 'LinkedIn', 'Instagram', 'Facebook'].map(item => (
-                <a key={item} href="#" className="text-[10px] font-black uppercase tracking-[0.2em] text-[var(--text-tertiary)] hover:text-[var(--primary)] transition-colors uppercase">{item}</a>
+              {[
+                { name: 'Twitter', href: 'https://x.com/TaxoBbuddy' },
+                { name: 'LinkedIn', href: 'https://www.linkedin.com/company/taxo-buddy/' },
+                { name: 'Instagram', href: 'https://www.instagram.com/taxobuddy/' },
+                { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61588643215308' }
+              ].map(item => (
+                <a key={item.name} href={item.href} target="_blank" rel="noopener noreferrer" className="text-[10px] font-black uppercase tracking-[0.2em] text-[var(--text-tertiary)] hover:text-[var(--primary)] transition-colors uppercase">{item.name}</a>
               ))}
             </div>
           </div>

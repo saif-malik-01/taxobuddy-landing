@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "TaxoBuddy — Intelligent Legal Heritage",
     description: "Source-backed research and drafting for professionals.",
-    creator: "@taxobuddy",
+    creator: "@TaxoBbuddy",
   },
   robots: {
     index: true,
