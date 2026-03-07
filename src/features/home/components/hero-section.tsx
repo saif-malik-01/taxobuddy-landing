@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import AIAssistantOrb from '../../../../components/assistent-ball';
 
 const HeroSection: React.FC = () => {
   const [query, setQuery] = useState('');
@@ -13,7 +14,7 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="relative min-h-[calc(100vh-76px)] flex flex-col items-center justify-center py-10 md:py-16 overflow-hidden bg-transparent">
+    <section className="relative min-h-[calc(100vh-76px)] flex flex-col items-center justify-center py-6 md:py-8 overflow-hidden bg-transparent">
 
       {/* ── Ambient Background Glow ── */}
       <div
@@ -26,20 +27,15 @@ const HeroSection: React.FC = () => {
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 flex flex-col items-center text-center w-full">
 
-        {/* ── Badge ── */}
-        <div
-          className="inline-flex items-center gap-2 mb-2 px-4 py-1.5 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-surface)] animate-fade-up"
-        >
-          <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary)] animate-pulse" />
-          <span className="text-[9px] uppercase tracking-[0.4em] text-[var(--primary)] font-extrabold font-heading">
-            Intelligence meets precision
-          </span>
+        {/* ── Assistant Ball ── */}
+        <div className="animate-fade-up flex justify-center items-center" style={{ animationDelay: '50ms' }}>
+          <AIAssistantOrb size={200} />
         </div>
 
         {/* ── Headline ── */}
         <h1
           className="font-heading font-black leading-[1.05] tracking-tighter mb-2 text-[var(--text-primary)] animate-fade-up uppercase"
-          style={{ fontSize: 'clamp(1.5rem, 5.5vw, 3.75rem)', animationDelay: '100ms' }}
+          style={{ fontSize: 'clamp(1.25rem, 4.5vw, 2.75rem)', animationDelay: '100ms' }}
         >
           complex law (gst) into <br className="hidden md:block" />
           <span style={{ color: 'var(--primary)' }}>clarity with precision</span>
