@@ -9,6 +9,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://taxobuddy.ai'),
   title: {
     default: "TaxoBuddy — The Intelligent Legal Heritage for Professionals",
     template: "%s | TaxoBuddy"
