@@ -55,13 +55,39 @@ const ContactPage = () => {
                 </div>
 
                 <div className="group">
-                  <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-[var(--text-tertiary)] mb-6 transition-colors group-hover:text-[var(--primary)]">Phone</h3>
+                  <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-[var(--text-tertiary)] mb-6 transition-colors group-hover:text-[var(--primary)]">Phone 1</h3>
                   <p className="text-2xl font-black text-[var(--text-primary)] tracking-tight mb-4">+91 9891005210</p>
                   <div className="flex gap-6">
                     <a href="tel:+919891005210" className="text-sm font-medium text-[var(--text-primary)] hover:text-[var(--primary)] transition-colors uppercase tracking-wider">
                       Call
                     </a>
                     <a href="https://wa.me/919891005210" className="text-sm font-medium text-[var(--text-primary)] hover:text-[var(--primary)] transition-colors uppercase tracking-wider">
+                      WhatsApp
+                    </a>
+                  </div>
+                </div>
+
+                <div className="group">
+                  <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-[var(--text-tertiary)] mb-6 transition-colors group-hover:text-[var(--primary)]">Phone 2</h3>
+                  <p className="text-2xl font-black text-[var(--text-primary)] tracking-tight mb-4">+91 9540002181</p>
+                  <div className="flex gap-6">
+                    <a href="tel:+919540002181" className="text-sm font-medium text-[var(--text-primary)] hover:text-[var(--primary)] transition-colors uppercase tracking-wider">
+                      Call
+                    </a>
+                    <a href="https://wa.me/919540002181" className="text-sm font-medium text-[var(--text-primary)] hover:text-[var(--primary)] transition-colors uppercase tracking-wider">
+                      WhatsApp
+                    </a>
+                  </div>
+                </div>
+
+                <div className="group">
+                  <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-[var(--text-tertiary)] mb-6 transition-colors group-hover:text-[var(--primary)]">Phone 3</h3>
+                  <p className="text-2xl font-black text-[var(--text-primary)] tracking-tight mb-4">+91 9540002186</p>
+                  <div className="flex gap-6">
+                    <a href="tel:+919540002186" className="text-sm font-medium text-[var(--text-primary)] hover:text-[var(--primary)] transition-colors uppercase tracking-wider">
+                      Call
+                    </a>
+                    <a href="https://wa.me/919540002186" className="text-sm font-medium text-[var(--text-primary)] hover:text-[var(--primary)] transition-colors uppercase tracking-wider">
                       WhatsApp
                     </a>
                   </div>
