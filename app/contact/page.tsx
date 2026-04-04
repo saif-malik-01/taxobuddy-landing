@@ -83,9 +83,9 @@ const ContactPage = () => {
                 <div className="group">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-[var(--text-tertiary)] mb-6 transition-colors group-hover:text-[var(--primary)]">Headquarters</h3>
                   <p className="text-[15px] text-[var(--text-secondary)] font-medium leading-relaxed max-w-xs">
-                    Astrazure Eventure Private Limited <br />
+                    Astrazure E ventures Private Limited <br />
                     C-9, Sushant Lok-1 <br />
-                    Sector -43, Gurgaon - 122002 <br />
+                    Sector - 43, Gurgaon - 122002 <br />
                     India
                   </p>
                 </div>
@@ -96,7 +96,7 @@ const ContactPage = () => {
                   <div className="w-2 h-2 rounded-full bg-[var(--primary)] animate-pulse" />
                   <span className="text-[10px] font-black uppercase tracking-widest text-[var(--text-secondary)]">Average Response: 2 Hours</span>
                 </div>
-                <p className="text-[12px] text-[var(--text-tertiary)] font-medium uppercase tracking-wider">Mon - Fri • 9:00 AM - 7:00 PM IST</p>
+                <p className="text-[12px] text-[var(--text-tertiary)] font-medium uppercase tracking-wider">Mon - Sat • 9:00 AM - 7:00 PM IST</p>
               </div>
             </div>
 
